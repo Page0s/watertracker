@@ -89,6 +89,7 @@ public class MeasurePointRestController {
             String description = (String) payload.get("description");
             
             // Dohvati ID lokacije iz payload-a
+            @SuppressWarnings("unchecked")
             Map<String, Object> locationMap = (Map<String, Object>) payload.get("location");
             Long locationId = Long.valueOf(locationMap.get("id").toString());
             
