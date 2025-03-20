@@ -1,0 +1,198 @@
+/* Dashboard CSS */
+body {
+    background-color: #f8f9fa;
+}
+
+.water-animation-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.location-card {
+    transition: all 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-blue {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    color: white;
+}
+
+.card-header-green {
+    background: linear-gradient(135deg, #198754, #157347);
+    color: white;
+}
+
+.card-header-red {
+    background: linear-gradient(135deg, #dc3545, #b02a37);
+    color: white;
+}
+
+.card-header-info {
+    background: linear-gradient(135deg, #0dcaf0, #0aa2c0);
+    color: white;
+}
+
+.card-header-dark-blue {
+    background: linear-gradient(135deg, #0a4b8c, #083c71);
+    color: white;
+}
+
+.consumption-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.text-info {
+    color: #0d6efd !important;
+}
+
+.text-cold-water {
+    color: #0d6efd !important; /* Primary plava boja za hladnu vodu */
+}
+
+.text-hot-water {
+    color: #dc3545 !important; /* Crvena boja za toplu vodu */
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: #0288d1;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #f8f9fa !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+    background-color: #0288d1 !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+.btn-add {
+    background-color: #0288d1;
+    color: white;
+}
+
+.alert {
+    margin-top: 1rem;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: #f8f9fa;
+}
+
+.dropdown-item:hover {
+    background-color: #0288d1;
+    color: white;
+}
+
+.dropdown-divider {
+    border-top-color: #6c757d;
+}
+
+.list-group-item.active {
+    background-color: #cfe2ff; /* Lighter blue */
+    border-color: #9ec5fe;
+    color: #084298;
+}
+
+.measure-point-item.active {
+    background-color: #d1e7dd; /* Lighter green */
+    border-color: #a3cfbb;
+    color: #0a3622;
+}
+
+/* Responsive tables for mobile */
+@media (max-width: 767.98px) {
+    .table-responsive-card thead {
+        display: none;
+    }
+    
+    .table-responsive-card tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+    
+    .table-responsive-card tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem;
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    .table-responsive-card tbody td:last-child {
+        border-bottom: none;
+    }
+    
+    .table-responsive-card tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+    
+    .table-responsive-card tbody td:last-child {
+        text-align: right;
+        justify-content: flex-end;
+    }
+    
+    .consumption-table {
+        padding: 0;
+    }
+    
+    .table-responsive-card {
+        border: none;
+        width: 100%;
+    }
+    
+    .table-responsive-card tr {
+        background-color: #fff;
+        margin-bottom: 1.5rem;
+    }
+    
+    .table-responsive-card td[data-label]::before {
+        font-weight: 600;
+        color: #495057;
+    }
+    
+    .btn-group {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+}
